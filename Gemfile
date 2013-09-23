@@ -1,11 +1,10 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
 # Mongo
-gem "mongo_mapper"
+gem 'mongo_mapper', :git => "git://github.com/mongomapper/mongomapper.git"
 gem "bson_ext"
 
 # Use SCSS for stylesheets
