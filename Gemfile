@@ -1,6 +1,3 @@
-require 'rubygems'
-require 'mongo'
-
 source 'https://rubygems.org'
 
 
@@ -8,8 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Mongo
-gem 'mongo_mapper'
-require 'mongo'
+gem "mongo_mapper"
+gem "bson_ext"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
