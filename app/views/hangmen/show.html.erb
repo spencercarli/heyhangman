@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Word:</strong>
+  <%= @hangman.word %>
+</p>
+
+<%= link_to 'Edit', edit_hangman_path(@hangman) %> |
+<%= link_to 'Back', hangmen_path %>

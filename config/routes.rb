@@ -1,4 +1,6 @@
 Heyhangman::Application.routes.draw do
+  resources :hangmen
+
   resources :words
 
   get "landing/index"
