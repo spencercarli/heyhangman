@@ -4,11 +4,16 @@ class HangmenController < ApplicationController
   # GET /hangmen
   # GET /hangmen.json
   def index
-    @hangmen = Hangman.all
+    #@hangmen = Hangman.all
+
     #Pulling words from the db needs to be done in a more efficient manner
     @words = Word.all
-    @word = @words[Random.rand(@words.size)]
-    @i = 1
+    @word = @words[Random.rand(@words.size)].word.to_s
+    
+    #Generate the line of underscores
+    @char_line = generate_line @word
+    
+
   end
 
   # GET /hangmen/1
@@ -63,6 +68,16 @@ class HangmenController < ApplicationController
       format.html { redirect_to hangmen_url }
       format.json { head :no_content }
     end
+  end
+
+  def generate_line word
+    i = 0
+    line = ""
+    while i < word.length
+      line += "_ "
+      i+=1
+    end
+    return line
   end
 
   private
