@@ -2,7 +2,16 @@
 
 <h2>Word: <%= @word %></h2>
 <h2>Char Line: <%= @char_line %></h2>
-
+<input type="text" placeholder="Your guess" id="user-guess"><input type="button" onclick="readVal()" value="Guess!">
 <br>
+<input type="button" onclick="readWord()" value="BOOM">
+<br>
+
+<script type="text/javascript">
+	window.onload = function readWord(){
+		var word = "<%= @word %>";
+		main(word);
+	}
+</script>
 
 <%= link_to 'New Hangman', new_hangman_path %>
